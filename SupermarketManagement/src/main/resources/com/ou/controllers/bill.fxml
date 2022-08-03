@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1500.0" stylesheets="@../../../com.ou.css/fullpackstyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ou.controllers.BillController">
+   <children>
+      <TableView fx:id="tbvBill" layoutX="2.0" layoutY="662.0" prefHeight="238.0" prefWidth="1490.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="8.0" />
+      <Button fx:id="btnBack" layoutX="1381.0" layoutY="22.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="82.0" text="⬅ Trở về" AnchorPane.rightAnchor="29.0" />
+      <FlowPane layoutX="231.0" layoutY="586.0" prefHeight="24.0" prefWidth="202.0" AnchorPane.leftAnchor="231.0" />
+      <ScrollPane layoutX="62.0" layoutY="376.0" prefHeight="212.0" prefWidth="1391.0">
+         <content>
+            <HBox fx:id="hbxBillProduct" prefHeight="207.0" prefWidth="1359.0">
+               <children>
+                  <VBox prefHeight="207.0" prefWidth="100.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0" prefWidth="100.0">
+                           <children>
+                              <Text layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã sản phẩm" />
+                              <Separator layoutY="35.0" prefHeight="6.0" prefWidth="106.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="207.0" prefWidth="266.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0" prefWidth="266.0">
+                           <children>
+                              <Text layoutX="95.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên sản phẩm" />
+                              <Separator layoutY="35.0" prefHeight="6.0" prefWidth="266.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="207.0" prefWidth="219.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0" prefWidth="219.0">
+                           <children>
+                              <Text layoutX="68.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loại sản phẩm" />
+                              <Separator layoutY="35.0" prefHeight="6.0" prefWidth="219.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="207.0" prefWidth="233.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0" prefWidth="233.0">
+                           <children>
+                              <Text layoutX="78.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nhà sản xuất" />
+                              <Separator layoutY="35.0" prefHeight="6.0" prefWidth="233.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="207.0" prefWidth="99.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0" prefWidth="99.0">
+                           <children>
+                              <Text layoutX="24.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số lượng" />
+                              <Separator layoutY="35.0" prefHeight="6.0" prefWidth="99.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="207.0" prefWidth="134.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0" prefWidth="134.0">
+                           <children>
+                              <Text layoutX="34.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên đơn vị" />
+                              <Separator layoutY="35.0" prefHeight="6.0" prefWidth="134.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="207.0" prefWidth="164.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0" prefWidth="164.0">
+                           <children>
+                              <Text layoutX="13.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Giá tiền 1 sản phẩm" />
+                              <Separator layoutY="35.0" prefHeight="6.0" prefWidth="160.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="207.0" prefWidth="126.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0" prefWidth="126.0">
+                           <children>
+                              <Text layoutX="23.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\% Giảm giá" />
+                              <Separator layoutY="35.0" prefHeight="6.0" prefWidth="126.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </content>
+      </ScrollPane>
+      <ImageView fitHeight="86.0" fitWidth="176.0" layoutX="17.0" layoutY="14.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../com.ou.images/ouLogo.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="62.0" layoutY="139.0" prefHeight="220.0" prefWidth="832.0">
+         <children>
+            <Label layoutX="15.0" layoutY="13.0" text="Mã hóa đơn:" />
+            <TextField fx:id="txtBillId" layoutX="159.0" layoutY="9.0" prefWidth="224.0" />
+            <Label layoutX="15.0" layoutY="63.0" text="Ngày lập hóa đơn:" />
+            <DatePicker fx:id="dtpBillCreatedDate" layoutX="161.0" layoutY="56.0" prefHeight="24.0" prefWidth="224.0" />
+            <Label layoutX="15.0" layoutY="117.0" text="Tên nhân viên:" />
+            <TextField fx:id="txtBillStaName" layoutX="162.0" layoutY="114.0" prefHeight="24.0" prefWidth="223.0" />
+            <Label layoutX="16.0" layoutY="170.0" text="Tên thành viên:" />
+            <TextField fx:id="txtBillMemName" layoutX="163.0" layoutY="166.0" prefHeight="24.0" prefWidth="224.0" />
+            <Label layoutX="427.0" layoutY="152.0" text="Tổng số hóa đơn:" />
+            <Text fx:id="textBillAmount" fill="RED" layoutX="611.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Segoe UI Bold" size="13.0" />
+               </font>
+            </Text>
+            <Label layoutX="424.0" layoutY="16.0" text="Tổng tiền thanh toán:" />
+            <TextField fx:id="txtBillTotalMoney" layoutX="605.0" layoutY="11.0" prefHeight="24.0" prefWidth="159.0" />
+            <Label layoutX="425.0" layoutY="61.0" text="Tiền khách hàng đưa:" />
+            <TextField fx:id="txtBillCustomerMoney" layoutX="606.0" layoutY="57.0" prefHeight="24.0" prefWidth="158.0" />
+            <Label layoutX="426.0" layoutY="105.0" text="Tổng tiền khuyến mãi:" />
+            <TextField fx:id="txtBillToTalSaleMoney" layoutX="607.0" layoutY="104.0" prefHeight="24.0" prefWidth="159.0" />
+            <Label layoutX="774.0" layoutY="16.0" text="VNĐ" />
+            <Label layoutX="776.0" layoutY="61.0" text="VNĐ" />
+            <Label layoutX="775.0" layoutY="108.0" text="VNĐ" />
+         </children>
+      </Pane>
+      <Pane layoutX="915.0" layoutY="96.0" prefHeight="284.0" prefWidth="539.0">
+         <children>
+            <Label layoutX="12.0" layoutY="15.0" text="Tìm kiếm tên nhân viên:" />
+            <TextField fx:id="txtSearchBillStaName" layoutX="199.0" layoutY="11.0" prefHeight="24.0" prefWidth="282.0" promptText="Nhập tên nhân viên ..." />
+            <Label layoutX="13.0" layoutY="64.0" text="Tìm kiếm tên thành viên:" />
+            <TextField fx:id="txtSearchBillMemName" layoutX="200.0" layoutY="58.0" prefHeight="26.0" prefWidth="282.0" promptText="Nhập tên thành viên ..." />
+            <Label layoutX="14.0" layoutY="108.0" text="Tìm kiếm ngày tạo hóa đơn:" />
+            <DatePicker fx:id="dtpSearchBillCreatedDate" layoutX="220.0" layoutY="104.0" prefHeight="24.0" prefWidth="168.0" promptText="Chọn ngày ..." />
+            <Button fx:id="btnSearchBillCreatedDate" layoutX="411.0" layoutY="101.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="82.0" text="🔎 Tìm kiếm" />
+            <Label layoutX="15.0" layoutY="149.0" text="Tìm theo khoảng thời gian: " />
+            <Label layoutX="16.0" layoutY="188.0" text="Từ ngày:" />
+            <DatePicker fx:id="dtpSearchBillFromCreatedDate" layoutX="94.0" layoutY="186.0" prefWidth="152.0" promptText="Chọn ngày ..." />
+            <Label layoutX="269.0" layoutY="189.0" text="Đến ngày:" />
+            <DatePicker fx:id="dtpSearchBillToCreatedDate" layoutX="352.0" layoutY="185.0" prefHeight="24.0" prefWidth="167.0" promptText="Chọn ngày ..." />
+            <Button fx:id="btnSearchBillPeriodCreatedDate" layoutX="93.0" layoutY="232.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="82.0" text="🔎 Tìm kiếm" />
+         </children>
+      </Pane>
+      <Line endX="29.0" endY="244.0" layoutX="875.0" layoutY="124.0" startX="29.0" startY="-42.0" />
+   </children>
+</AnchorPane>

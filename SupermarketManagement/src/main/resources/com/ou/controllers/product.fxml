@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1500.0" stylesheets="@../../../com.ou.css/fullpackstyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ou.controllers.ProductController">
+   <children>
+      <TableView fx:id="tbvProduct" layoutY="534.4" prefHeight="365.0" prefWidth="1500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Pane layoutX="1083.0" layoutY="101.0" prefHeight="181.0" prefWidth="351.0">
+         <children>
+            <ScrollPane layoutX="5.0" layoutY="45.0" prefHeight="124.0" prefWidth="342.0">
+               <content>
+                  <VBox fx:id="vbxProUnits" prefHeight="122.0" prefWidth="339.0" />
+               </content>
+            </ScrollPane>
+            <Label alignment="CENTER" layoutX="12.0" layoutY="12.0" prefHeight="19.0" prefWidth="327.0" text="DANH SÁCH ĐƠN GIÁ SẢN PHẨM" />
+         </children>
+      </Pane>
+      <Pane layoutX="777.0" layoutY="301.0" prefHeight="174.0" prefWidth="327.0">
+         <children>
+            <ScrollPane layoutX="30.0" layoutY="38.0" prefHeight="124.0" prefWidth="278.0">
+               <content>
+                  <VBox fx:id="vbxProLimitSales" prefHeight="122.0" prefWidth="274.0" />
+               </content>
+            </ScrollPane>
+            <Label alignment="CENTER" layoutX="16.0" layoutY="9.0" prefHeight="19.0" prefWidth="303.0" text="DANH SÁCH KHUYẾN MÃI SẢN PHẨM" />
+         </children>
+      </Pane>
+      <Pane layoutX="1117.0" layoutY="298.0" prefHeight="174.0" prefWidth="327.0">
+         <children>
+            <ScrollPane layoutX="13.0" layoutY="36.0" prefHeight="124.0" prefWidth="303.0">
+               <content>
+                  <VBox fx:id="vbxProBranches" prefHeight="120.0" prefWidth="297.0" />
+               </content>
+            </ScrollPane>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="11.0" prefHeight="19.0" prefWidth="303.0" text="DANH SÁCH CHI NHÁNH" textAlignment="CENTER" />
+         </children>
+      </Pane>
+      <Label layoutX="585.0" layoutY="144.0" text="Tìm kiếm theo tên sản phẩm:" />
+      <Button fx:id="btnAddPro" layoutX="665.0" layoutY="223.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="82.0" text="➕ Thêm" />
+      <Button fx:id="btnEditPro" layoutX="777.0" layoutY="223.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="79.0" text="➖ Sửa" />
+      <Button fx:id="btnDelPro" layoutX="887.0" layoutY="224.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="78.0" text="❌ Xóa" />
+      <TextField fx:id="txtSearchProName" layoutX="585.0" layoutY="179.0" prefHeight="24.0" prefWidth="287.0" promptText="Nhập tên sản phẩm ...." />
+      <Pane layoutX="101.0" layoutY="128.0" prefHeight="334.0" prefWidth="440.0">
+         <children>
+            <Label layoutX="32.0" layoutY="17.0" text="Mã sản phẩm:" />
+            <TextField fx:id="txtProId" layoutX="177.0" layoutY="13.0" prefHeight="24.0" prefWidth="248.0" />
+            <Label layoutX="32.0" layoutY="57.0" text="Tên sản phẩm:" />
+            <TextField fx:id="txtProName" layoutX="178.0" layoutY="53.0" prefHeight="24.0" prefWidth="248.0" promptText="Nhập tên sản phẩm ..." />
+            <Label layoutX="32.0" layoutY="99.0" text="Số chi nhánh bán sản phẩm:" />
+            <TextField fx:id="txtProBranchAmount" layoutX="248.0" layoutY="94.0" prefHeight="24.0" prefWidth="178.0" />
+            <Label layoutX="32.0" layoutY="139.0" text="Số đơn vị của sản phẩm:" />
+            <TextField fx:id="txtProUnitAmount" layoutX="222.0" layoutY="135.0" prefHeight="24.0" prefWidth="204.0" />
+            <Label layoutX="33.0" layoutY="182.0" text="Loại hàng:" />
+            <ComboBox fx:id="cbxProCategory" layoutX="160.0" layoutY="176.0" prefHeight="24.0" prefWidth="266.0" />
+            <Label layoutX="33.0" layoutY="221.0" text="Nhà sản xuất:" />
+            <ComboBox fx:id="cbxProManufacturer" layoutX="160.0" layoutY="217.0" prefHeight="24.0" prefWidth="266.0" />
+            <Label layoutX="33.0" layoutY="265.0" text="Trạng thái hoạt động" />
+            <TextField fx:id="txtProIsActive" layoutX="208.0" layoutY="260.0" prefHeight="24.0" prefWidth="218.0" />
+            <Label layoutX="33.0" layoutY="302.0" text="Tổng số sản phẩm:" />
+            <Text fx:id="textProAmount" fill="RED" layoutX="177.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Segoe UI Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Label layoutX="585.0" layoutY="228.0" text="Thao tác:" />
+      <Button fx:id="btnBack" layoutX="1377.0" layoutY="27.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="82.0" text="⬅ Trở về" />
+      <ImageView fitHeight="86.0" fitWidth="176.0" layoutX="17.0" layoutY="14.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../com.ou.images/ouLogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

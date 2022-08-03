@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1500.0" stylesheets="@../../../com.ou.css/fullpackstyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ou.controllers.LimitSaleController">
+
+   <children>
+      <TableView fx:id="tbvLimitSale" layoutY="349.0" prefHeight="561.0" prefWidth="1510.0" />
+      <ImageView fitHeight="86.0" fitWidth="176.0" layoutX="27.0" layoutY="24.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../com.ou.images/ouLogo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnBack" layoutX="1381.0" layoutY="21.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="245.0" text="⬅ Trở về" />
+      <Pane layoutX="1016.0" layoutY="118.0" prefHeight="138.0" prefWidth="415.0">
+         <children>
+            <Label layoutX="11.0" layoutY="12.0" text="Tìm kiếm theo ngày:" />
+            <DatePicker fx:id="dpSearchDate" layoutX="168.0" layoutY="8.0" prefHeight="25.0" prefWidth="230.0" promptText="Chọn ngày ..." />
+            <Label layoutX="12.0" layoutY="57.0" text="Thao tác:" />
+            <Button fx:id="btnAdd" layoutX="81.0" layoutY="85.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="245.0" text="➕ Thêm" />
+            <Button fx:id="btnDelete" layoutX="304.0" layoutY="85.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="245.0" text="❌ Xóa" />
+            <Button fx:id="btnEdit" layoutX="192.0" layoutY="85.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="245.0" text="➖ Sửa" />
+         </children>
+      </Pane>
+      <Pane layoutX="149.0" layoutY="116.0" prefHeight="227.0" prefWidth="862.0">
+         <children>
+            <Label layoutX="10.0" layoutY="14.0" text="Mã giảm giá:" />
+            <ComboBox fx:id="cbSaleId" layoutX="202.0" layoutY="9.0" prefHeight="25.0" prefWidth="151.0" />
+            <Label layoutX="10.0" layoutY="53.0" text="Mã sản phẩm giảm giá:" />
+            <ComboBox fx:id="cbProductLimitSaleId" layoutX="201.0" layoutY="48.0" prefHeight="25.0" prefWidth="151.0" />
+            <Label layoutX="10.0" layoutY="96.0" text="Mã sản phẩm không giảm giá:" />
+            <ComboBox fx:id="cbProductNotInLimitSaleId" layoutX="238.0" layoutY="91.0" prefHeight="25.0" prefWidth="115.0" />
+            <Label layoutX="11.0" layoutY="139.0" text="Từ ngày:" />
+            <Label layoutX="11.0" layoutY="182.0" text="Đến ngày:" />
+            <DatePicker fx:id="dpLsalFromDate" layoutX="97.0" layoutY="135.0" prefHeight="25.0" prefWidth="144.0" promptText="Chọn ngày ..." />
+            <DatePicker fx:id="dpLsalToDate" layoutX="97.0" layoutY="178.0" prefHeight="25.0" prefWidth="144.0" promptText="Chọn ngày ..." />
+            <Label layoutX="409.0" layoutY="14.0" text="Trạng thái:" />
+            <TextField fx:id="txtSaleIsActive" layoutX="589.0" layoutY="9.0" prefHeight="25.0" prefWidth="243.0" />
+            <Label layoutX="409.0" layoutY="61.0" text="Mã sản phẩm áp dụng:" />
+            <TextArea fx:id="textAreaListProductId" layoutX="590.0" layoutY="51.0" prefHeight="0.0" prefWidth="243.0" />
+            <Label layoutX="409.0" layoutY="106.0" text="Số lượng sản phẩm áp dụng:" />
+            <Text fx:id="textAmountProduct" fill="RED" layoutX="627.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="10.068768501281738">
+               <font>
+                  <Font name="Segoe UI Bold" size="13.0" />
+               </font>
+            </Text>
+            <Label layoutX="409.0" layoutY="149.0" text="Tổng số mã giảm giá có thời hạn còn hoạt động:" />
+            <Text fx:id="textTotalAmountLimitSale" fill="RED" layoutX="767.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Segoe UI Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
