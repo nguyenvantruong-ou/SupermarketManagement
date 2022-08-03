@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane onKeyPressed="#setKeyEnter" prefHeight="600.0" prefWidth="1000.0" stylesheets="@../../../com.ou.css/fullpackstyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ou.controllers.SignInController">
+   <children>
+      <BorderPane layoutX="-1.0" prefHeight="600" prefWidth="1000">
+         <left>
+            <Pane prefHeight="600.0" prefWidth="400.0" styleClass="linear-gradient" stylesheets="@../../../com.ou.css/fullpackstyling.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="154.0" fitWidth="284.0" layoutX="59.0" layoutY="144.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../com.ou.images/ouLogo.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="282.0" prefHeight="26.0" prefWidth="393.0" text="Quản lý siêu thị khó" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="314.0" prefHeight="26.0" prefWidth="393.0" text="Đã có OU Market lo !" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="562.0" prefHeight="26.0" prefWidth="393.0" text="Copyright © 2022 All rights reserved |  by OU Teams" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </left>
+         <center>
+            <Pane prefHeight="600.0" prefWidth="600.0" stylesheets="@../../../com.ou.css/fullpackstyling.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnSignIn" alignment="CENTER" contentDisplay="CENTER" layoutX="219.0" layoutY="475.0" mnemonicParsing="false" onKeyPressed="#setKeyEnter" prefHeight="55.0" prefWidth="179.0" styleClass="button-login" text="Đăng nhập">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txtUsername" layoutX="110.0" layoutY="276.0" prefHeight="72.0" prefWidth="400.0" styleClass="text-field-login">
+                     <font>
+                        <Font name="Segoe UI Bold" size="16.0" />
+                     </font></TextField>
+                  <PasswordField fx:id="txtPassword" layoutX="110.0" layoutY="385.0" prefHeight="45.0" prefWidth="400.0" styleClass="text-field-login">
+                     <font>
+                        <Font name="Segoe UI Bold" size="16.0" />
+                     </font></PasswordField>
+                  <Text layoutY="129.0" strokeWidth="0.0" text="ĐĂNG NHẬP" textAlignment="CENTER" wrappingWidth="601.7513732910156">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="35.0" />
+                     </font>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Text>
+                  <FontAwesomeIconView glyphName="LOCK" layoutX="290.0" layoutY="197.0" size="40" />
+                  <Pane layoutX="97.0" layoutY="229.0" prefHeight="39.0" prefWidth="314.0">
+                     <children>
+                        <Text layoutX="46.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên tài khoản" wrappingWidth="160.0">
+                           <font>
+                              <Font name="Segoe UI Bold" size="22.0" />
+                           </font>
+                        </Text>
+                        <FontAwesomeIconView glyphName="USER" layoutX="15.0" layoutY="31.0" size="25" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="102.0" layoutY="329.0" prefHeight="53.0" prefWidth="220.0">
+                     <children>
+                        <Text focusTraversable="true" layoutX="49.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mật khẩu" wrappingWidth="160.0">
+                           <font>
+                              <Font name="Segoe UI Bold" size="22.0" />
+                           </font>
+                        </Text>
+                        <FontAwesomeIconView glyphName="KEY" layoutX="10.0" layoutY="38.0" size="25" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   
+   </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1500.0" stylesheets="@../../../com.ou.css/fullpackstyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ou.controllers.ManufacturerController">
+   <children>
+      <TableView fx:id="tbvManufacturer" layoutX="-3.0" layoutY="251.0" prefHeight="510.0" prefWidth="1500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <ImageView fitHeight="86.0" fitWidth="176.0" layoutX="17.0" layoutY="14.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../com.ou.images/ouLogo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnBack" layoutX="1384.0" layoutY="23.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="82.0" text="⬅ Trở về" />
+      <Pane layoutX="823.0" layoutY="85.0" prefHeight="187.0" prefWidth="494.0">
+         <children>
+            <Label layoutX="28.0" layoutY="18.0" text="Tìm kiếm:" />
+            <TextField fx:id="txtSearchManName" layoutX="28.0" layoutY="48.0" prefHeight="24.0" prefWidth="287.0" promptText="Tìm kiếm theo tên nhà sản xuất ..." />
+            <Label layoutX="28.0" layoutY="96.0" text="Thao tác:" />
+            <Button fx:id="btnAddMan" layoutX="85.0" layoutY="128.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="82.0" text="➕ Thêm" />
+            <Button fx:id="btnEditMan" layoutX="193.0" layoutY="127.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="79.0" text="➖ Sửa" />
+            <Button fx:id="btnDelMan" layoutX="306.0" layoutY="127.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="78.0" text="❌ Xóa" />
+         </children>
+      </Pane>
+      <Pane layoutX="276.0" layoutY="95.0" prefHeight="240.0" prefWidth="494.0">
+         <children>
+            <Label layoutX="15.0" layoutY="17.0" text="Mã nhà sản xuất:" />
+            <TextField fx:id="txtManId" layoutX="218.0" layoutY="10.0" prefHeight="24.0" prefWidth="259.0" />
+            <Label layoutX="14.0" layoutY="58.0" text="Tên nhà sản xuất:" />
+            <TextField fx:id="txtManName" layoutX="218.0" layoutY="54.0" prefHeight="24.0" prefWidth="259.0" promptText="Nhập tên nhà sản xuất ..." />
+            <Label layoutX="15.0" layoutY="103.0" text="Số sản phẩm nhà sản xuất:" />
+            <TextField fx:id="txtManProductAmount" layoutX="218.0" layoutY="98.0" prefHeight="24.0" prefWidth="259.0" />
+            <Label layoutX="15.0" layoutY="149.0" text="Trạng thái hoạt động" />
+            <TextField fx:id="txtManIsActive" layoutX="218.0" layoutY="144.0" prefHeight="24.0" prefWidth="259.0" />
+            <Label layoutX="15.0" layoutY="191.0" text="Tổng số nhà sản xuất:" />
+            <Text fx:id="textManAmount" fill="RED" layoutX="195.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Segoe UI Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

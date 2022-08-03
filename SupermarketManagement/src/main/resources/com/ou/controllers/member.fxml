@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1500.0" stylesheets="@../../../com.ou.css/fullpackstyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ou.controllers.MemberController">
+   <children>
+      <TableView fx:id="tbvMember" layoutX="-41.0" layoutY="241.0" prefHeight="542.0" prefWidth="1517.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <ImageView fitHeight="86.0" fitWidth="176.0" layoutX="17.0" layoutY="14.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../com.ou.images/ouLogo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnBack" layoutX="1383.0" layoutY="22.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="82.0" text="⬅ Trở về" />
+      <Pane layoutX="1110.0" layoutY="111.0" prefHeight="163.0" prefWidth="407.0">
+         <children>
+            <Label layoutX="10.0" layoutY="14.0" text="Tìm kiếm:" />
+            <TextField fx:id="txtSearchMemName" layoutX="14.0" layoutY="42.0" prefHeight="24.0" prefWidth="287.0" promptText="Nhập tên thành viên ..." />
+            <Label layoutX="12.0" layoutY="82.0" text="Thao tác:" />
+            <Button fx:id="btnAdd" layoutX="37.0" layoutY="113.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="82.0" text="➕ Thêm" />
+            <Button fx:id="btnEdit" layoutX="147.0" layoutY="113.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="79.0" text="➖ Sửa" />
+            <Button fx:id="btnDelete" layoutX="260.0" layoutY="112.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="78.0" text="❌ Xóa" />
+         </children>
+      </Pane>
+      <Pane layoutX="33.0" layoutY="119.0" prefHeight="198.0" prefWidth="1008.0">
+         <children>
+            <TextField fx:id="txtMemId" layoutX="134.0" layoutY="6.0" prefHeight="25.0" prefWidth="148.0" />
+            <TextField fx:id="txtMemLastName" layoutX="134.0" layoutY="50.0" prefHeight="25.0" prefWidth="148.0" promptText="Nhập họ và tên đệm ..." />
+            <TextField fx:id="txtMemFirstName" layoutX="134.0" layoutY="94.0" prefHeight="25.0" prefWidth="148.0" promptText="Nhập tên ... " />
+            <ComboBox fx:id="cbMemSex" layoutX="133.0" layoutY="140.0" prefWidth="148.0" />
+            <TextField fx:id="txtMemCardId" layoutX="449.0" layoutY="6.0" prefHeight="25.0" prefWidth="184.0" promptText="Nhập số CMND/CCCD ..." />
+            <TextField fx:id="txtMemPhoneNumber" layoutX="449.0" layoutY="50.0" prefHeight="25.0" prefWidth="184.0" promptText="Nhập số điện thoại ..." />
+            <DatePicker fx:id="dpMemDoB" layoutX="449.0" layoutY="95.0" prefHeight="11.0" prefWidth="184.0" promptText="Chọn ngày sinh ..." />
+            <DatePicker fx:id="dpMemJoinedDate" layoutX="449.0" layoutY="140.0" prefHeight="11.0" prefWidth="184.0" promptText="Chọn ngày tham gia ..." />
+            <TextField fx:id="txtMemIsActive" layoutX="828.0" layoutY="5.0" prefHeight="25.0" prefWidth="180.0" />
+            <TextField fx:id="txtMemTotalPurchase" layoutX="828.0" layoutY="50.0" prefHeight="25.0" prefWidth="180.0" />
+            <TextField fx:id="txtMemType" layoutX="829.0" layoutY="96.0" prefHeight="25.0" prefWidth="180.0" />
+            <Text fx:id="textMemAmount" fill="RED" layoutX="951.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Segoe UI Bold" size="13.0" />
+               </font>
+            </Text>
+            <Label layoutX="21.0" layoutY="9.0" text="Mã thành viên:" />
+            <Label layoutX="22.0" layoutY="55.0" text="Họ và đệm:" />
+            <Label layoutX="22.0" layoutY="100.0" text="Tên:" />
+            <Label layoutX="21.0" layoutY="145.0" text="Giới tính:" />
+            <Label layoutX="325.0" layoutY="9.0" text="Số CCCD/CMND:" />
+            <Label layoutX="324.0" layoutY="55.0" text="Số điện thoại:" />
+            <Label layoutX="324.0" layoutY="100.0" text="Ngày sinh:" />
+            <Label layoutX="324.0" layoutY="144.0" text="Ngày tham gia:" />
+            <Label layoutX="690.0" layoutY="9.0" text="Trạng thái:" />
+            <Label layoutX="691.0" layoutY="56.0" text="Tổng tiền đã mua:" />
+            <Label layoutX="692.0" layoutY="101.0" text="Loại thành viên:" />
+            <Label layoutX="692.0" layoutY="146.0" text="Tổng số thành viên còn hoạt động:" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

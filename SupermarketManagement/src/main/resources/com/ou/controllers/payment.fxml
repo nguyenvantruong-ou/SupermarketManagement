@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1500.0" stylesheets="@../../../com.ou.css/fullpackstyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ou.controllers.PaymentController">
+
+   <children>
+      <ScrollPane layoutX="12.0" layoutY="45.0" prefHeight="380.0" prefWidth="922.0">
+         <content>
+            <HBox fx:id="hbxBillProducts" prefHeight="380.0" prefWidth="1268.0">
+               <children>
+                  <VBox prefHeight="380.0" prefWidth="70.0">
+                     <children>
+                        <AnchorPane prefHeight="65.0" prefWidth="70.0">
+                           <children>
+                              <Separator layoutY="50.0" prefHeight="6.0" prefWidth="70.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="380.0" prefWidth="115.0">
+                     <children>
+                        <AnchorPane prefHeight="65.0" prefWidth="115.0">
+                           <children>
+                              <Text layoutX="7.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã sản phẩm" />
+                              <Separator layoutY="50.0" prefHeight="6.0" prefWidth="115.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="380.0" prefWidth="232.0">
+                     <children>
+                        <AnchorPane prefHeight="65.0" prefWidth="232.0">
+                           <children>
+                              <Text layoutX="65.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên sản phẩm" />
+                              <Separator layoutY="50.0" prefHeight="6.0" prefWidth="232.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="380.0" prefWidth="138.0">
+                     <children>
+                        <AnchorPane prefHeight="65.0" prefWidth="138.0">
+                           <children>
+                              <Text layoutX="41.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số lượng" />
+                              <Separator layoutY="50.0" prefHeight="6.0" prefWidth="138.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="380.0" prefWidth="175.0">
+                     <children>
+                        <AnchorPane prefHeight="65.0" prefWidth="175.0">
+                           <children>
+                              <Text layoutX="56.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Đơn vị tính" />
+                              <Separator layoutY="50.0" prefHeight="6.0" prefWidth="175.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="380.0" prefWidth="192.0">
+                     <children>
+                        <AnchorPane prefHeight="65.0" prefWidth="192.0">
+                           <children>
+                              <Text layoutX="34.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá bán thông thường" />
+                              <Separator layoutY="50.0" prefHeight="6.0" prefWidth="192.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="380.0" prefWidth="171.0">
+                     <children>
+                        <AnchorPane prefHeight="65.0" prefWidth="171.0">
+                           <children>
+                              <Text layoutX="30.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá bán giảm giá" />
+                              <Separator layoutY="50.0" prefHeight="6.0" prefWidth="171.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="380.0" prefWidth="175.0">
+                     <children>
+                        <AnchorPane prefHeight="65.0" prefWidth="175.0">
+                           <children>
+                              <Text layoutX="56.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng tiền" />
+                              <Separator layoutY="50.0" prefHeight="6.0" prefWidth="175.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+
+
+               </children></HBox>
+         </content></ScrollPane>
+      <AnchorPane layoutX="952.0" layoutY="157.0" prefHeight="234.0" prefWidth="559.0">
+         <children>
+            <TextField fx:id="txtStaName" layoutX="197.0" layoutY="48.0" prefHeight="24.0" prefWidth="267.0" />
+            <TextField fx:id="txtMemName" layoutX="198.0" layoutY="89.0" prefHeight="24.0" prefWidth="267.0" />
+            <Button fx:id="btnMemChoice" layoutX="10.0" layoutY="176.0" mnemonicParsing="false" prefWidth="179.0" styleClass="button-choose-guest" text="🤵 Chọn khách hàng thành viên" />
+            <AnchorPane fx:id="acpMemInfo" layoutX="212.0" layoutY="167.0" prefHeight="59.0" prefWidth="326.0">
+               <children>
+                  <TextField fx:id="txtMemId" layoutX="126.0" layoutY="11.0" prefHeight="24.0" prefWidth="81.0" promptText="Nhập mã ...." />
+                  <Button fx:id="btnMemConfirm" layoutX="225.0" layoutY="9.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="141.0" text="👉 Xác nhận" />
+                  <Label layoutX="12.0" layoutY="17.0" text="Mã thành viên:" />
+               </children>
+            </AnchorPane>
+            <TextField fx:id="txtMemType" layoutX="198.0" layoutY="130.0" prefHeight="24.0" prefWidth="267.0" />
+            <TextField fx:id="txtMemberId" layoutX="463.0" layoutY="42.0" prefHeight="24.0" prefWidth="93.0" />
+            <Label layoutX="14.0" layoutY="52.0" text="Nhân viên thanh toán:" />
+            <Label layoutX="14.0" layoutY="92.0" text="Khách hàng thành viên:" />
+            <Label layoutX="15.0" layoutY="135.0" text="Loại thành viên:" />
+            <TextField fx:id="txtBillCreatedDate" layoutX="196.0" layoutY="6.0" prefHeight="24.0" prefWidth="267.0" />
+            <Label layoutX="14.0" layoutY="11.0" text="Ngày tạo hóa đơn:" />
+            <TextField fx:id="txtSalePercent" layoutX="470.0" layoutY="130.0" prefHeight="24.0" prefWidth="49.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="952.0" layoutY="408.0" prefHeight="254.0" prefWidth="568.0">
+         <children>
+            <TextField fx:id="txtBillTempTotalMoney" layoutX="182.0" layoutY="11.0" prefHeight="59.0" prefWidth="275.0" />
+            <TextField fx:id="txtBillTotalSaleMoney" layoutX="183.0" layoutY="53.0" prefHeight="59.0" prefWidth="275.0" />
+            <TextField fx:id="txtBillActualTotalMoney" layoutX="184.0" layoutY="95.0" prefHeight="59.0" prefWidth="275.0" />
+            <TextField fx:id="txtBillCustomerMoney" layoutX="178.0" layoutY="216.0" prefHeight="59.0" prefWidth="200.0" promptText="Nhập số tiền ..." />
+            <TextField fx:id="txtExcessCash" layoutX="179.0" layoutY="259.0" prefHeight="59.0" prefWidth="200.0" />
+            <Label layoutX="15.0" layoutY="15.0" text="Tổng tiền thanh toán:" />
+            <Label layoutX="16.0" layoutY="99.0" text="Tổng tiền hóa đơn:" />
+            <Label layoutX="15.0" layoutY="56.0" text="Tổng tiền giảm giá:" />
+            <Label layoutX="14.0" layoutY="218.0" text="Tổng tiền khách đưa:" />
+            <Label layoutX="15.0" layoutY="263.0" text="Tiền thừa:" />
+            <Button fx:id="btnCalExcessCash" layoutX="234.0" layoutY="167.0" mnemonicParsing="false" text="👉 Tính tiền" />
+            <Label layoutX="170.0" layoutY="136.0" text="(Giá trên đã bao gồm thuế GTGT)" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtProId" layoutX="228.0" layoutY="438.0" prefHeight="24.0" prefWidth="249.0" promptText="Nhập thông tin mã sản phẩm ..." />
+      <Button fx:id="btnProSearch" layoutX="496.0" layoutY="435.0" mnemonicParsing="false" text="🔎 Tìm kiếm" />
+      <AnchorPane layoutX="28.0" layoutY="466.0" prefHeight="150.0" prefWidth="710.0">
+         <children>
+            <TextField fx:id="txtProName" layoutX="138.0" layoutY="17.0" prefHeight="24.0" prefWidth="250.0" />
+            <TextField fx:id="txtProCat" layoutX="138.0" layoutY="61.0" prefHeight="24.0" prefWidth="250.0" />
+            <TextField fx:id="txtProMan" layoutX="139.0" layoutY="105.0" prefHeight="24.0" prefWidth="250.0" />
+            <TextField fx:id="txtProAmo" layoutX="561.0" layoutY="16.0" prefHeight="44.0" prefWidth="124.0" promptText="Nhập số lượng ..." />
+            <TextField fx:id="txtProductId" layoutX="411.0" layoutY="61.0" prefHeight="24.0" prefWidth="69.0" />
+            <Label layoutX="18.0" layoutY="23.0" text="Tên sản phẩm: " />
+            <Label layoutX="19.0" layoutY="65.0" text="Loại sản phẩm: " />
+            <Label layoutX="19.0" layoutY="110.0" text="Nhà sản xuất:" />
+            <Label layoutX="415.0" layoutY="22.0" text="Số lượng cần mua:" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="956.0" layoutY="722.0" prefHeight="128.0" prefWidth="442.0">
+         <children>
+            <Button fx:id="btnBillCreation" layoutX="81.0" layoutY="30.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="161.0" styleClass="button-payment" text="🖍 Tạo hóa đơn mới" />
+            <Button fx:id="btnBillPayment" layoutX="266.0" layoutY="80.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="161.0" styleClass="button-payment" text="💰 Thanh toán" />
+            <Button fx:id="btnBillProductAddition" layoutX="81.0" layoutY="81.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="161.0" styleClass="button-payment" text="➕ Thêm sản phẩm" />
+            <Button fx:id="btnBillProductCancel" layoutX="265.0" layoutY="30.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="161.0" styleClass="button-payment" text="❌ Hủy sản phẩm" />
+            <Label layoutX="12.0" layoutY="4.0" text="Thao tác:" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtBillBranchAddress" layoutX="1045.0" layoutY="94.0" prefHeight="24.0" prefWidth="371.0" />
+      <Button fx:id="btnSignOut" layoutX="1369.0" layoutY="19.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="214.0" text="⬅ Đăng xuất" />
+      <Label layoutX="46.0" layoutY="440.0" text="Thông tin mã sản phẩm:" />
+      <Pane layoutX="46.0" layoutY="631.0" prefHeight="190.0" prefWidth="628.0">
+         <children>
+            <Label layoutX="266.0" layoutY="6.0" text="Bảng đơn giá" />
+            <ScrollPane hvalue="1.0" layoutX="14.0" layoutY="42.0" prefHeight="135.0" prefWidth="601.0">
+               <content>
+                  <HBox fx:id="hbxProUnits" prefHeight="132.0" prefWidth="550.0">
+                     <children>
+                        <VBox prefHeight="132.0" prefWidth="68.0">
+                           <children>
+                              <AnchorPane prefHeight="57.0" prefWidth="68.0">
+                                 <children>
+                                    <Separator layoutY="30.0" prefHeight="6.0" prefWidth="68.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="132.0" prefWidth="212.0">
+                           <children>
+                              <AnchorPane prefHeight="57.0" prefWidth="212.0">
+                                 <children>
+                                    <Text layoutX="64.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên đơn vị" />
+                                    <Separator layoutY="30.0" prefHeight="6.0" prefWidth="212.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="132.0" prefWidth="188.0">
+                           <children>
+                              <AnchorPane prefHeight="57.0" prefWidth="188.0">
+                                 <children>
+                                    <Text layoutX="83.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá" />
+                                    <Separator layoutY="30.0" prefHeight="6.0" prefWidth="188.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <AnchorPane prefHeight="57.0" prefWidth="100.0">
+                                 <children>
+                                    <Text layoutX="40" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã" />
+                                    <Separator layoutY="30.0" prefHeight="6.0" prefWidth="100.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <Label layoutX="1167.0" layoutY="64.0" text="ĐỊA CHỈ CHI NHÁNH" />
+      <Line endX="238.0001220703125" layoutX="1166.0" layoutY="145.0" startX="-100.0" />
+      <Line endX="238.0001220703125" layoutX="1162.0" layoutY="397.0" startX="-100.0" />
+      <Line endX="238.0001220703125" layoutX="1164.0" layoutY="716.0" startX="-100.0" />
+      <Line endX="363.5" layoutX="576.0" layoutY="617.0" startX="-576.0" />
+   </children>
+</AnchorPane>

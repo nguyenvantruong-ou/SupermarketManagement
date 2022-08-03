@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1500.0" stylesheets="@../../../com.ou.css/fullpackstyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ou.controllers.SalePercentController">
+
+   <children>
+      <TableView fx:id="tbvSper" layoutX="76.0" layoutY="192.0" prefHeight="630.0" prefWidth="751.0" AnchorPane.bottomAnchor="78.0" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="673.0" />
+      <ImageView fitHeight="86.0" fitWidth="176.0" layoutX="17.0" layoutY="14.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../com.ou.images/ouLogo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnBack" layoutX="1372.0" layoutY="27.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="82.0" text="⬅ Trở về" />
+      <Pane layoutX="892.0" layoutY="192.0" prefHeight="180.0" prefWidth="542.0">
+         <children>
+            <Label layoutX="26.0" layoutY="18.0" text="Mã giảm giá:" />
+            <TextField fx:id="txtSperId" layoutX="202.0" layoutY="14.0" prefWidth="227.0" />
+            <Label layoutX="26.0" layoutY="60.0" text="Phần trăm giảm giá:" />
+            <TextField fx:id="txtSperPercent" layoutX="203.0" layoutY="55.0" prefHeight="24.0" prefWidth="227.0" promptText="Nhập % giảm giá ..." />
+            <Label layoutX="26.0" layoutY="103.0" text="Trạng thái:" />
+            <TextField fx:id="txtSperIsActive" layoutX="203.0" layoutY="97.0" prefWidth="227.0" />
+            <Label layoutX="27.0" layoutY="140.0" text="Tổng số mã giảm giá:" />
+            <Text fx:id="textSperAmount" fill="#ec0000" layoutX="205.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="899.0" layoutY="365.0" prefHeight="115.0" prefWidth="456.0">
+         <children>
+            <Label layoutX="20.0" layoutY="49.0" text="Thao tác:" />
+            <Button fx:id="btnAddSper" layoutX="77.0" layoutY="81.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="82.0" text="➕ Thêm" />
+            <Button fx:id="btnDelSper" layoutX="309.0" layoutY="81.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="78.0" text="❌ Xóa" />
+            <Label layoutX="20.0" layoutY="8.0" text="Tìm kiếm theo phần trăm giảm giá:" />
+            <TextField fx:id="txtSearchSper" layoutX="281.0" layoutY="4.0" prefHeight="24.0" prefWidth="142.0" promptText="Nhập % giảm giá ..." />
+            <Button fx:id="btnEditSper" layoutX="192.0" layoutY="81.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="79.0" text="➖ Sửa" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

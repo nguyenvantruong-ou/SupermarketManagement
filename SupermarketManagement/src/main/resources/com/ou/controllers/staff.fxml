@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1500.0" stylesheets="@../../../com.ou.css/fullpackstyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ou.controllers.StaffController">
+
+   <children>
+      <TableView fx:id="tbvStaff" layoutY="474.0" prefHeight="426.0" prefWidth="1500.0" />
+      <AnchorPane layoutX="120.0" layoutY="149.0" prefHeight="307.0" prefWidth="898.0">
+         <children>
+            <ComboBox fx:id="cbBranch" disable="true" layoutX="603.0" layoutY="7.0" prefHeight="25.0" prefWidth="290.0" promptText="Chọn nhánh" />
+            <Label layoutX="28.0" layoutY="103.0" text="Số CMND:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="149.0" text="Số điện thoại:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="190.0" text="Giới tính:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="15.0" text="Họ:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="58.0" text="Tên:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="241.0" text="Ngày sinh:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="473.0" layoutY="104.0" text="Trạng thái:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtLastName" layoutX="140.0" layoutY="9.0" prefHeight="25.0" prefWidth="290.0" />
+            <TextField fx:id="txtFirstName" layoutX="140.0" layoutY="54.0" prefHeight="25.0" prefWidth="290.0" />
+            <TextField fx:id="txtIdCard" layoutX="140.0" layoutY="99.0" prefHeight="25.0" prefWidth="290.0" />
+            <TextField fx:id="txtPhoneNumber" layoutX="140.0" layoutY="144.0" prefHeight="25.0" prefWidth="290.0" />
+            <TextField fx:id="txtActive" layoutX="603.0" layoutY="99.0" prefHeight="25.0" prefWidth="290.0" />
+            <Label layoutX="473.0" layoutY="13.0" text="Nhánh:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbRole" disable="true" layoutX="603.0" layoutY="52.0" prefHeight="25.0" prefWidth="290.0" promptText="Chọn quyền" />
+            <Label layoutX="474.0" layoutY="60.0" text="Quyền:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dpDateOfBirth" layoutX="141.0" layoutY="235.0" prefHeight="25.0" prefWidth="290.0" />
+            <ComboBox fx:id="cbSex" disable="true" layoutX="141.0" layoutY="189.0" prefHeight="25.0" prefWidth="290.0" promptText="Chọn giới tính" />
+            <AnchorPane fx:id="apPassword" layoutX="449.0" layoutY="187.0" prefHeight="113.0" prefWidth="443.0">
+               <children>
+                  <Label layoutX="25.0" layoutY="5.0" text="Mật khẩu:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="pwPassword" layoutX="154.0" prefHeight="25.0" prefWidth="290.0" />
+                  <Label layoutX="25.0" layoutY="52.0" text="Xác nhận:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="pwConfirmPw" layoutX="156.0" layoutY="46.0" prefHeight="25.0" prefWidth="290.0" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="473.0" layoutY="148.0" text="Tên tài khoản:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUsername" layoutX="603.0" layoutY="144.0" prefHeight="25.0" prefWidth="290.0" />
+            <CheckBox fx:id="resetPw" layoutX="605.0" layoutY="282.0" mnemonicParsing="false" text="Đặt lại mật khẩu (trùng với tên tài khoản)" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1060.0" layoutY="131.0" prefHeight="230.0" prefWidth="290.0">
+         <children>
+            <TextField fx:id="txtSearch" layoutX="98.0" layoutY="20.0" prefHeight="25.0" prefWidth="262.0" promptText="Tìm kiếm theo tên ..." />
+            <Button fx:id="btnAdd" disable="true" layoutX="108.0" layoutY="93.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="231.0" text="➕ Thêm" />
+            <Button fx:id="btnEdit" disable="true" layoutX="109.0" layoutY="144.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="231.0" text="➖ Sửa" />
+            <Button fx:id="btnDelete" disable="true" layoutX="110.0" layoutY="198.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="231.0" text="❌ Xóa" />
+            <CheckBox fx:id="chbAdd" layoutX="74.0" layoutY="102.0" mnemonicParsing="false" />
+            <CheckBox fx:id="chbEdit" layoutX="74.0" layoutY="154.0" mnemonicParsing="false" />
+            <CheckBox fx:id="chbDelete" layoutX="74.0" layoutY="206.0" mnemonicParsing="false" />
+            <Label layoutX="11.0" layoutY="25.0" text="Tìm kiếm:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="66.0" text="Thao tác:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnBack" layoutX="1378.0" layoutY="24.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" text="⬅ Trở về" />
+      <AnchorPane fx:id="apId" layoutX="137.0" layoutY="124.0" prefHeight="19.0" prefWidth="180.0">
+         <children>
+            <Label layoutX="11.0" layoutY="4.0" text="Mã nhân viên:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblId" layoutX="117.0" layoutY="4.0" text="0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="86.0" fitWidth="170.0" layoutX="17.0" layoutY="14.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../com.ou.images/ouLogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

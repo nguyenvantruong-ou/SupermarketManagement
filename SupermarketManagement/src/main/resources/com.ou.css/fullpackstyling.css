@@ -1,0 +1,182 @@
+.button {
+    -fx-background-color: #2D75E8;
+    -fx-border-color: #2D75E8;
+    -fx-text-fill: #FFF;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-pref-height: 35;
+    -fx-pref-width: 90;
+}
+
+.button:hover {
+    -fx-background-color: #0852c5;
+    -fx-text-fill: #FFF;
+}
+
+.button:pressed {
+    -fx-background-color: #0861ec;
+    -fx-text-fill: #FFF;
+}
+
+.button2 {
+    -fx-background-color: #2D75E8;
+    -fx-border-color: #2D75E8;
+    -fx-text-fill: #FFF;
+}
+
+.button2:hover {
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFF;
+}
+
+.button2:pressed {
+    -fx-background-color: #0C3400;
+    -fx-text-fill: #FFF;
+}
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size: 20;
+    -fx-background-color: #2D75E8;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-view .cell {
+    -fx-cell-size: 30;
+    -fx-alignment: center-left;
+    -fx-text-fill: #000000;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: rgb(127, 172, 243);
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgb(127, 172, 243);
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: white;
+}
+
+.text-field, .password-field, .combo-box, .date-picker {
+    -fx-pref-height: 30;
+    -fx-font-size: 13;
+    -fx-font-family: Segoe UI;
+}
+
+.text-field:focused {
+    -fx-border-color: #2D75E8;
+}
+
+.label {
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+    -fx-font-family: Segoe UI;
+}
+
+/* scroll bar starts here */
+
+/* The increment and decrement button CSS class of scrollbar */
+.table-view .increment-button, .table-view .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 2em;
+}
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: derive(#2D75E8, 80%);
+    -fx-background-radius: 2em;
+    -fx-border-radius: 2em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color: derive(#2D75E8, 90%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+}
+
+/* chart properties */
+
+.chart {
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+    -fx-legend-visible: false;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.chart-pie {
+    -fx-border-color: derive(-fx-pie-color, 1%);
+    -fx-border-width: 0px;
+}
+
+.linear-gradient {
+    -fx-background-color: linear-gradient(to bottom left, #2286d9, #0958b4);
+}
+
+.linear-gradient-admin {
+    -fx-background-color: linear-gradient(to bottom left, #2286d9, #0958b4);
+}
+
+.linear-gradient-admin .label {
+    -fx-text-fill: white;
+}
+
+.button-login {
+    -fx-pref-height: 55;
+    -fx-pref-width: 180;
+}
+
+.button-logout {
+    -fx-pref-height: 45;
+    -fx-pref-width: 150;
+    -fx-font-size: 18;
+    -fx-background-color: #427de8;
+    -fx-border-color: #427de8;
+}
+
+.button-logout:hover {
+    -fx-background-color: #5186e1;
+}
+
+.button-logout:pressed {
+    -fx-background-color: #1d6aea;
+}
+.button-payment {
+    -fx-pref-width: 150;
+}
+
+.button-choose-guest {
+    -fx-pref-width: 190;
+}
+
+.button-management-admin {
+    -fx-pref-width: 250;
+    -fx-pref-height: 100;
+    -fx-text-alignment: CENTER;
+    -fx-wrap-text: true;
+}
+
+.text-field-login {
+    -fx-pref-height: 50;
+    -fx-font-size: 16;
+}
+
+.title {
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-font-family: Segoe UI;
+    -fx-text-fill: white;
+}

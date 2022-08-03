@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1500.0" stylesheets="@../../../com.ou.css/fullpackstyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ou.controllers.SaleController">
+
+   <children>
+      <TableView fx:id="tbvSale" layoutX="67.0" layoutY="191.0" prefHeight="614.0" prefWidth="701.0" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="732.0" />
+      <ImageView fitHeight="86.0" fitWidth="176.0" layoutX="27.0" layoutY="24.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../com.ou.images/ouLogo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnBack" layoutX="1368.0" layoutY="32.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="82.0" text="⬅ Trở về" />
+      <Pane layoutX="858.0" layoutY="191.0" prefHeight="386.0" prefWidth="554.0">
+         <children>
+            <Label layoutX="16.0" layoutY="12.0" text="Mã giảm giá:" />
+            <TextField fx:id="txtSaleId" layoutX="212.0" layoutY="8.0" prefHeight="25.0" prefWidth="209.0" />
+            <Label layoutX="17.0" layoutY="56.0" text="Mã phần trăm giảm giá:" />
+            <ComboBox fx:id="cbSperId" layoutX="211.0" layoutY="52.0" prefHeight="25.0" prefWidth="209.0" />
+            <Label layoutX="18.0" layoutY="99.0" text="Số phần trăm giảm giá:" />
+            <TextField fx:id="txtSalePercent" layoutX="213.0" layoutY="94.0" prefHeight="25.0" prefWidth="209.0" />
+            <Label layoutX="18.0" layoutY="143.0" text="Trạng thái hoạt động:" />
+            <TextField fx:id="txtSaleIsActive" layoutX="213.0" layoutY="138.0" prefHeight="25.0" prefWidth="209.0" />
+            <Label layoutX="18.0" layoutY="180.0" text="Tổng số mã giảm giá còn hoạt động:" />
+            <Text fx:id="textSaleAmount" fill="RED" layoutX="294.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Segoe UI Bold" size="13.0" />
+               </font>
+            </Text>
+            <Label layoutX="19.0" layoutY="222.0" text="Tìm kiếm theo mã giảm giá:" />
+            <TextField fx:id="txtSearchSale" layoutX="239.0" layoutY="217.0" prefHeight="24.0" prefWidth="184.0" promptText="Nhập % giảm giá ..." />
+            <Label layoutX="20.0" layoutY="261.0" text="Thao tác:" />
+            <Button fx:id="btnAdd" layoutX="93.0" layoutY="295.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="82.0" text="➕ Thêm" />
+            <Button fx:id="btnEdit" layoutX="216.0" layoutY="295.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="79.0" text="➖ Sửa" />
+            <Button fx:id="btnDelete" layoutX="338.0" layoutY="295.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="78.0" text="❌ Xóa" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

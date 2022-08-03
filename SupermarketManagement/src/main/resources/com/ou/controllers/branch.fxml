@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1500.0" stylesheets="@../../../com.ou.css/fullpackstyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ou.controllers.BranchController">
+   <children>
+      <TableView fx:id="tbvBranch" layoutX="-41.0" layoutY="241.0" prefHeight="538.0" prefWidth="1500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <ImageView fitHeight="86.0" fitWidth="176.0" layoutX="17.0" layoutY="14.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../com.ou.images/ouLogo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnBack" layoutX="1385.0" layoutY="22.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="82.0" text="⬅ Trở về" />
+      <Pane layoutX="1013.0" layoutY="117.0" prefHeight="172.0" prefWidth="404.0">
+         <children>
+            <Label layoutX="11.0" layoutY="13.0" text="Tìm kiếm theo tên chi nhánh:" />
+            <TextField fx:id="txtSearchBraName" layoutX="11.0" layoutY="44.0" prefHeight="24.0" prefWidth="287.0" promptText="Nhập tên chi nhánh ..." />
+            <Label layoutX="13.0" layoutY="89.0" text="Thao tác:" />
+            <Button fx:id="btnAddBra" layoutX="82.0" layoutY="124.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="82.0" text="➕ Thêm" />
+            <Button fx:id="btnEditBra" layoutX="190.0" layoutY="124.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="79.0" text="➖ Sửa" />
+            <Button fx:id="btnDelBra" layoutX="298.0" layoutY="124.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="78.0" text="❌ Xóa" />
+         </children>
+      </Pane>
+      <Pane layoutX="146.0" layoutY="122.0" prefHeight="190.0" prefWidth="845.0">
+         <children>
+            <Label layoutX="13.0" layoutY="12.0" text="Mã chi nhánh:" />
+            <TextField fx:id="txtBraId" layoutX="133.0" layoutY="8.0" prefWidth="253.0" />
+            <Label layoutX="13.0" layoutY="57.0" text="Tên chi nhánh:" />
+            <TextField fx:id="txtBraName" layoutX="134.0" layoutY="52.0" prefHeight="24.0" prefWidth="253.0" promptText="Nhập tên chi nhánh ..." />
+            <Label layoutX="14.0" layoutY="99.0" text="Địa chỉ chi nhánh:" />
+            <TextField fx:id="txtBraAddress" layoutX="15.0" layoutY="137.0" prefHeight="24.0" prefWidth="374.0" promptText="Nhập địa chỉ chi nhánh ..." />
+            <Label layoutX="443.0" layoutY="11.0" text="Số nhân viên chi nhánh:" />
+            <TextField fx:id="txtBraStaffAmount" layoutX="643.0" layoutY="7.0" prefHeight="24.0" prefWidth="177.0" />
+            <Label layoutX="443.0" layoutY="57.0" text="Số sản phẩm chi nhánh:" />
+            <TextField fx:id="txtBraProductAmount" layoutX="643.0" layoutY="50.0" prefHeight="24.0" prefWidth="177.0" />
+            <Label layoutX="443.0" layoutY="99.0" text="Trạng thái:" />
+            <TextField fx:id="txtBraIsActive" layoutX="644.0" layoutY="95.0" prefWidth="177.0" />
+            <Label layoutX="442.0" layoutY="139.0" text="Tổng số chi nhánh:" />
+            <Text fx:id="textBraAmount" fill="RED" layoutX="649.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Segoe UI Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

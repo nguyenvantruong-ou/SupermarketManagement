@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="901.0" prefWidth="1500.0" stylesheets="@../../../com.ou.css/fullpackstyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ou.controllers.UnitController">
+   <children>
+      <TableView fx:id="tbvUnit" layoutY="179.0" prefHeight="718.0" prefWidth="1000.0" />
+      <Pane layoutX="1029.0" layoutY="178.0" prefHeight="168.0" prefWidth="446.0">
+         <children>
+            <TextField fx:id="txtUniId" layoutX="193.0" layoutY="9.0" prefHeight="30.0" prefWidth="226.0">
+               <font>
+                  <Font name="Segoe UI" size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtUniName" layoutX="194.0" layoutY="55.0" prefHeight="30.0" prefWidth="226.0" promptText="Nhập tên đơn vị ...." />
+            <TextField fx:id="txtUniIsActive" layoutX="195.0" layoutY="98.0" prefHeight="30.0" prefWidth="226.0" />
+            <Text fx:id="textUniAmount" fill="RED" layoutX="202.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Segoe UI Bold" size="16.0" />
+               </font>
+            </Text>
+            <Label layoutX="22.0" layoutY="15.0" text="Mã đơn vị:" />
+            <Label layoutX="22.0" layoutY="58.0" text="Tên đơn vị:" />
+            <Label layoutX="22.0" layoutY="101.0" text="Trạng thái hoạt động:" />
+            <Label layoutX="22.0" layoutY="140.0" text="Tổng số đơn vị:" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="86.0" fitWidth="176.0" layoutX="17.0" layoutY="14.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../com.ou.images/ouLogo.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="1040.0" layoutY="340.0" prefHeight="141.0" prefWidth="420.0">
+         <children>
+            <TextField fx:id="txtSearchUniName" layoutX="186.0" layoutY="8.0" prefHeight="30.0" prefWidth="226.0" promptText="Tìm kiếm theo tên đơn vị ...." />
+            <Button fx:id="btnAddUni" layoutX="77.0" layoutY="87.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="➕ Thêm">
+               <font>
+                  <Font name="Segoe UI" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditUni" layoutX="186.0" layoutY="87.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="➖ Sửa">
+               <font>
+                  <Font name="Segoe UI" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDelUni" layoutX="295.0" layoutY="87.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="❌ Xóa" />
+            <Label layoutX="12.0" layoutY="13.0" text="Tìm kiếm:" />
+            <Label layoutX="12.0" layoutY="50.0" text="Thao tác:" />
+         </children>
+      </Pane>
+      <Button fx:id="btnBack" layoutX="1373.0" layoutY="25.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="⬅ Trở về" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1500.0" stylesheets="@../../../com.ou.css/fullpackstyling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ou.controllers.HomepageAdminController">
+
+   <children>
+      <BorderPane layoutX="-2.0" layoutY="-2.0" prefHeight="922.0" prefWidth="1502.0">
+         <right>
+            <AnchorPane prefHeight="715.0" prefWidth="424.0" styleClass="linear-gradient-admin" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="34.0" prefHeight="35.0" prefWidth="415.0" styleClass="title" text="Thông tin tài khoản" textFill="BLUE">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="45.0" layoutY="120.0" prefHeight="27.0" prefWidth="125.0" text="Tên tài khoản">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUsername" layoutX="175.0" layoutY="120.0" prefHeight="27.0" prefWidth="199.0" text=" ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="45.0" layoutY="314.0" prefHeight="27.0" prefWidth="125.0" text="Số CMND">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCartId" layoutX="175.0" layoutY="314.0" prefHeight="27.0" prefWidth="235.0" text=" ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="45.0" layoutY="215.0" prefHeight="27.0" prefWidth="125.0" text="Tên ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFirstName" layoutX="175.0" layoutY="215.0" prefHeight="27.0" prefWidth="235.0" text=" ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="45.0" layoutY="167.0" prefHeight="27.0" prefWidth="125.0" text="Họ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblLastName" layoutX="175.0" layoutY="167.0" prefHeight="27.0" prefWidth="235.0" text=" ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="44.0" layoutY="365.0" prefHeight="27.0" prefWidth="125.0" text="Số điện thoại">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPhoneNumber" layoutX="175.0" layoutY="365.0" prefHeight="27.0" prefWidth="235.0" text=" ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="508.0" prefHeight="27.0" prefWidth="125.0" text="Ngày tham gia">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblJoinedDate" layoutX="175.0" layoutY="508.0" prefHeight="27.0" prefWidth="235.0" text=" ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="45.0" layoutY="460.0" prefHeight="27.0" prefWidth="125.0" text="Ngày sinh">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDateOfBirth" layoutX="175.0" layoutY="460.0" prefHeight="27.0" prefWidth="235.0" text=" ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="45.0" layoutY="412.0" prefHeight="27.0" prefWidth="125.0" text="Giới tính">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSex" layoutX="175.0" layoutY="412.0" prefHeight="27.0" prefWidth="235.0" text=" ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="45.0" layoutY="265.0" prefHeight="27.0" prefWidth="125.0" text="Nhánh">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblBranch" layoutX="175.0" layoutY="265.0" prefHeight="27.0" prefWidth="235.0" text=" ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnSignOut" layoutX="145.0" layoutY="735.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="142.0" styleClass="button-logout" text="⬅ Đăng xuất" textFill="RED">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </right>
+         <center>
+            <AnchorPane prefHeight="273.0" prefWidth="1039.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnTypeMember" layoutX="103.0" layoutY="184.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="273.0" styleClass="button-management-admin" text="📝 Quản lý loại thành viên">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCategory" layoutX="425.0" layoutY="349.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="273.0" styleClass="button-management-admin" text="📝 Quản lý loại hàng">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnProduct" layoutX="737.0" layoutY="349.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="273.0" styleClass="button-management-admin" text="📝 Quản lý sản phẩm">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnStaff" layoutX="736.0" layoutY="183.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="273.0" styleClass="button-management-admin" text="📝 Quản lý nhân viên">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnMember" layoutX="423.0" layoutY="183.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="273.0" styleClass="button-management-admin" text="📝 Quản lý thành viên">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnManuFacturer" layoutX="103.0" layoutY="347.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="273.0" styleClass="button-management-admin" text="📝 Quản lý nhà sản xuất">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBill" layoutX="739.0" layoutY="509.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="273.0" styleClass="button-management-admin" text="📝 Quản lý hóa đơn">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnUnit" layoutX="426.0" layoutY="508.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="273.0" styleClass="button-management-admin" text="📝 Quản lý đơn vị">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBranch" layoutX="104.0" layoutY="506.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="273.0" styleClass="button-management-admin" text="📝 Quản lý chi nhánh">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSale" layoutX="739.0" layoutY="665.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="217.0" styleClass="button-management-admin" text="📝 Quản lí giảm giá vô thời hạn" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnLimitSale" layoutX="426.0" layoutY="665.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="273.0" styleClass="button-management-admin" text="📝 Quản lý giảm giá có thời hạn" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSalePercent" layoutX="104.0" layoutY="666.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="273.0" styleClass="button-management-admin" text="📝 Quản lý phần trăm giảm giá" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <ImageView fitHeight="91.0" fitWidth="284.0" layoutX="17.0" layoutY="14.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../com.ou.images/ouLogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
